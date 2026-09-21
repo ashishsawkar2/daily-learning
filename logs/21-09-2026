@@ -1,0 +1,10 @@
+Today I solved leetcode question number 1394:Find Lucky Integer in an Array.
+Description : It basically states that the integer in an array which has same frequency as it's value will be lucky integer. And in case of multiple numbers, larger one will be our answer.
+Solution Steps:
+So I created a hashmap to store numbers and their frequency.
+First I stored all the values in the hashmap.
+Then I looped through hashmap to find number which has same key and value.
+And if none was to be found I returned -1.
+
+I did not just returned the answer in one loop because it might happen that one number has greater frequency than its value. So we might reach a point where that number and current frequency is same but the number is repeated more times in future.
+So first we should store all the values then check once again in hashmap.
