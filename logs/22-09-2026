@@ -1,0 +1,13 @@
+Today I solved leetcode question number 1669: Merge In Between Linked Lists.
+Description: It states that we are given two linked lists, list1 and list2, and we are given two values 'a' and 'b'.
+              We must insert list2 in between those values of list1.
+              eg- If list1=[1,2,3,4,5,6,7], list2=[11,12,13,14], a='2' and b='4'
+                  So our output should be ans=[1,2,11,12,13,14,6,7]
+              We must replace values at location 'a' to 'b' with list2 in list1.
+
+Solution: So I took 2 variables. With 'start' being head of list2 and 'end' being ending node of list2.
+          Then I took a pointer named 'temp'. It points to head of list1.
+          And I took an integer 'n'=0.
+          Our goal was simple, when we reached the location 'a-1' we will point that node to 'start' variable.
+          And when we reached 'b+1' we will point next of 'end' variable to that node.
+          Otherwise we will just increase 'n' and move 'temp'.
