@@ -1,0 +1,10 @@
+Today I solved leetcode question number 1701: Average Waiting Time.
+Description: We are given an array of customers where it contains a pair.
+              First number of pair is arrival time of customer and another one is the time it requires our chef to make their order.
+              We have a chef who takes one order at a time.
+              We want to find average waiting time of each customer.
+Solution : First we create 2 variables. One being ans and another being curr time.
+            When we start for loop first we take curr time as maximum of either curr or customer arrival time at current index.
+            Then we can add order time of that customer to our curr variable.
+            Then we can add to ans the total waiting time of current customer by simply subtracting the curr time with arrival time of the customer.
+            At the end we can return the ans after dividing it by total customers i.e size of array.
