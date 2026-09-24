@@ -1,0 +1,16 @@
+Today I solved leetcode question 3550:Smallest Index with the digit sum equal to index.
+Description: Problem states that we are given an array of integers.
+              We must find the smallest index where digit sum of that number is equal to index of that number.
+              If we don't find any of the number then the answer will be -1.
+              eg- arr=[1,10,11]
+                  So at index 0 digit sum of number is 1.
+                  At index 1 digit sum of 10 is 1. So 1 will be our answer.
+Solution: We start our loop from 0th index.
+          Then we can make another variable named num with same value as the number at that index.
+          And we will make another variable named sum with the value 0.
+          Then we will start a while loop which will check if our num is greater than 0.
+          And we will add digits to sum by taking modulo by 10 of num.
+          And we will divide num by 10.
+          And when while loop ends we will check if sum is equal to current index or not.
+          And if yes then we will retuen that index.
+          When we exit our main loop and till that time if we haven't found our answer then we can return -1.
