@@ -1,0 +1,17 @@
+Today I solved leetcode question 1721: Swapping Nodes in a Linked List.
+Description: We are given a linked list along with an integer value k.
+              We must swap node value at kth index from starting and kth index from ending.
+              eg- [1,2,3,4,5] k=2
+               ans=[1,4,3,2,5] ie. Linked list is 1 indexed.
+Solution: First we create a 'temp' variable which will point towards head. Then another one with value 0 which we will call 'n'.
+          And another two variables one being 'node1' which will point towards NULL and another 'val1' which will have val as -1.
+          Then we will start our loop till the temp does not point towards NULL.
+          With each loop we will add 1 to 'n' and take temp to next node.
+          Once our 'n' reaches 'k' we will assign value to 'node1' as temp and 'val1' as value of temp.
+          But we will continue our loop. Because we will get what is size of our linked list.
+          Then again we will point 'temp' to head. And we will create two more variables 'node2' and 'val2'.
+          We will then create a 'second' variable which will have value n-k. And then we will assign 'n' as 0.
+          We will again start our loop till 'temp' reaches null. And if we reach a node where 'n==second' then we will assign values to 'node2' as temp and 'val2' as value of that node.
+          Then we will end our loop. 
+          And at last we will just assign values. Like we will change node1 value to val2 and node2 value to val1.
+Time complexity- O(2n), Space Complexity-O(1)
