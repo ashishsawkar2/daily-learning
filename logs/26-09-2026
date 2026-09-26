@@ -1,0 +1,21 @@
+Today I solved leetcode question 1807:Evaluate the Bracket Pairs of a String.
+
+Description: We are given a strring and a 2D array.
+              In string we are given some keys.
+              eg- MyNameIs(name).
+              And in array we are given 2 values at each index.
+              eg-[["name","Ashish"]]
+              So we must change the key inside the string s to the value given in array.
+              And if there is no value then we must replace it with a question mark.
+              O/P- MyNameIsAshish.
+              
+Solution: First we must make a hashmap named 'check' to store all the key-value pairs of array.
+          Then we create variable named 'ans' to store our final answer.
+          Then we will start our loop and we will keep first condition as if(s[i]=='(').
+          In this condition we will get what is our key.
+          Then we will create a variable named 'key'.
+          And we will store all the character till we reach ')'.
+          Then we will check whether our hashmap has it's value or not.
+          If yes then we will add that value to our 'ans' variable.
+          If not the we will add '?' to our 'ans'.
+          And if there is no '(' at start we will just add all other characters.
