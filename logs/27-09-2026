@@ -1,0 +1,17 @@
+Today I solved leetcode question number 2180:Count Integers with even digit sum.
+
+Description: The question states that we will be given an integer variable called 'num'.
+              And we must return the answer which contains all the integers less than num whose digit sum is even.
+              eg- num=15
+                  ans=7
+                  [2,4,6,8,11,13,15]
+
+Solution: First I created a variable named 'ans'.
+          Then I created a for loop from 1 till num.
+          And inside for loop I created a while loop which would run till our num is greater than 0.
+          And by first using modulo operation by 10 I will get every digit of that number.
+          And I will divide that number by 10.
+          Then we will add all those digits.
+          And at the end we will check if the sum is even or odd.
+          If even then we will increase our answer by 1.
+          Else we will move to next number.
