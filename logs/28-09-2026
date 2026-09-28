@@ -1,0 +1,14 @@
+Today I solved leetcode question 2225: Find players with Zero or Losses.
+
+Description: It states that we are given an array of arrays with size 2.
+              Where first index is the player who won and second index is the player who lost.
+              So we are told to return an array with size 2 of arrays. In first array we must include players with 0 losses and second array should have players with 1 losses.
+              eg- matches=[[1,2],[2,3],[1,3]]
+                  ans=[[1],[2,3]]
+
+Solution: First we create a hashmap with key as an integer and value as an array of size 2.
+          In key we will store player number and in array we will store his wins and losses at index 0 and 1 respectively.
+          Now we will create answer array with 2 arrays in it.
+          Then we will iterate through hash map and check for players who have 0 and 1 losses.
+          Then we will just add players with 0 losses to first array and players with losses 2 to second array.
+          At last we will sort both arrays and we will return our answer.
