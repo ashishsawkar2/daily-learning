@@ -1,0 +1,15 @@
+Today I solved leetcode question 1281:Subtract the product and sum of digits of an integer.
+
+Description: Question states that we are given an integer and we must add up all its digits and also take product of all those digits.
+              eg- 1234
+               Sum of digits is 10
+               Product is 24
+               So our final answer will be 14(24-10).
+
+Solution: First we will create two variables sum and product.
+          And we must create a variable num with same value as our integer.
+          Then we must start our while loop till our number is greater than 0.
+          First we use use modulo by 10 and we will get last digit of our integer.
+          Then we must add that integer to sum and multiply that digit to product.
+          And then we must divide our integer by 10.
+          Then at last we must return the subtraction of product and sum variable.
