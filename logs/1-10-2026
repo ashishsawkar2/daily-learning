@@ -1,0 +1,23 @@
+Today I solved leetcode question 1002:Find Common Characters.
+
+Description: It states that we are given an array of strings and we must return an array with all the characters which are common in all the words.
+              We must also include duplicates. 
+              eg - words=["hello","bello","cello"]
+                   ans=["e","l","l","o"]
+
+Solution: First we must create two hashmaps. First one to store characters from one word which we will select and another to store characters of remaining words.
+          So we will select first word of the array as our word whose characters we will store.
+          We will also create a vector to store answer.
+          Then we must start our for loop till it reaches the size of our word which we selected.
+          Then we must check whether the current character is already present in the hashmap or not. If yes we will take an integer and give it the value as the occurrence of this character.
+          Otherwise we will assign it value 1.
+          Then we must start our for loop till we reach the size of array with words.
+          We will first add characters of one word to our hashmap.
+          And we will check whether the current character has frequency more than or equal to the number.
+          If yes we will move to next word. Else we will break our loop.
+          And to check whether to add the current character to our answer we will keep a boolean variable of add and keep it false.
+          And once we reach the end of our for loop of words in array we will make it true.
+          And at the end of each for loop we will clear our array.
+          Once loop ends we will check whether add is true or false.
+          If true we will add current character to out answer else we will move to next character.
+          
