@@ -1,0 +1,24 @@
+Today I solved leetcode question 2300: Successfull Pairs of Spells and Potions.
+
+Description: We are given two arrays named spells and potion. And an integer named success.
+              A spell and a potion pair is considered successfull if their product is greater than or equal to success.
+              We must return an array of answers where each index represents total number of successful pairs a spell can make.
+              eg- spells=[1,2,3] potions=[1,2,3,4,5] success=5
+                  ans=[2,3,4]
+
+Solution: If we use double for loop to check each and every paie we will get TLE.
+          So here we first sort the potions array and then check the first index where the potion and spell pair is successful.
+          And every element after that will form a successful pair.
+          First we create an answer pair.
+          Then we sort the potions array.
+          Then we will start a for loop of same size of spells array.
+          Inside for loop we will assign 2 values one low and another high.
+          Low being 0 and high being size of potions array minus 1.
+          And we will create a index variable and assign it the value -1.
+          Then we will start a while loop till low is less than equal to high.
+          Then we will create a variable named midd inside while loop.
+          It will be sum of high and low and then divided by 2.
+          Then we will check whether element at index midd is forminig successful pair with the current spells index.
+          If yes we will assign answer the value of midd. And we will assign the high as midd minus 1.
+          Else we will make low as midd plus 1.
+          If our index variable is still -1 then we will add 0 to our answer array. And if not then we will just add size minus index to our answer array.
