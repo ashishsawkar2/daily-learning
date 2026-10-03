@@ -1,0 +1,35 @@
+Today I solved leetcode question 2326: Spiral Matrix IV.
+
+Description: Question states that we are given a linked list with values and we should put that values in m x n matrix.
+              And if we do not have sufficient values then we must put -1 in empty places.
+              And we must place our values in spiral format.
+              eg- list=[1,2,3,4,5,6] m=3 n=3
+                ans=  [1   2  3]
+                      [-1 -1  4] 
+                      [-1  6  5]
+
+Solution: We first create five variables. top, bottom, left, right and temp.
+          top and left will have values 0. bottom will have value m-1 and right will have value n-1. temp will point to head.
+          We will create answer matrix with pre assigned values of -1.
+          Then we will start our while loop till top is less than equal to bottom and left is less than equal to right and temp is not equal to null.
+          
+          Now we will start our first for loop.
+          Our starting will be left and it will run till it is less than equal to right.
+          And inside it we will assign values at index [top][i] the value of temp if it is not null.
+          And then we will move temp to next node. If temp is equal to null we will do nothing.
+          Then after the loop we will increase top by 1.
+          
+          Now we will start oue second loop which will start from top and run till bottom.
+          Inside it we will assign the values at index [i][right] the value of temp if it is not null. And we will move temp to next node.
+          If null then we will do nothing. And then we will decrease right by 1.
+          
+          Now we will start our third loop which will start from right and run till left.
+          Inside this loop we will assign the values at index [bottom][i] the value of temp if it is not null.
+          And we will move temp to next node. And if it is null we will do nothing.
+          And at last we will decrease bottom by 1.
+
+          Now we will start our final loop which will start from bottom and run till top.
+          We will assign values at index [i][left] the value of temp if it is not null. And we will move temp to next node.
+          And if it is null we will do nothing. Now we will increase left by 1.
+
+          Our solution runs in a spiral cycle which matrix getting smaller from each side at a time.
