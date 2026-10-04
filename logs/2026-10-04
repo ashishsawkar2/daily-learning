@@ -1,1 +1,15 @@
+Today I solved leetcode question 2395: Find Subarrays with equal sum.
 
+Description: It states that we must find atleast 2 subarrays with size 2 should have euql sum.
+              eg- [4,2,4] 
+                  ans=true
+                  As [4,2] and [2,4] are 2 subarrays with equal sum.
+
+Solution: First we create a hash map to store our sum of different subarrays.
+          Now we will start our for loop but it will run from 0 to last second index element.
+          We will have one variable named summ.
+          Inside we will add current index and next index.
+          We will check if this summ already exists in hashmap or not.
+          If yes we will return true.
+          Else we will continue.
+          Once loop finishes we will retuen false.
