@@ -1,0 +1,15 @@
+Today I solved leetcode question 2410: Maximum matching of players with trainers.
+
+Description: We are given two arrays players and trainers.
+              Players array at i th index contains ability of i th player.
+              And in trainers array at i th index it contains training ability of i th player.
+              We must pair up trainer and a player where player's ability should be less than or equal to training ability of trainer.
+              We can only pair 1 trainer to 1 player.
+
+Solution: First sort both the arrays.
+          Then create 3 variables. 
+          First one being answer and another two being i and j.
+          All variables will have value of 0 at start.
+          We must start a while loop and it will run till i is less than size of players array and j is less than size of trainers array.
+          Our first condition will be if i th player ability is less than or equal to j th trainer ability then we will incease all 3 variables by 1.
+          If not then we will just increase j by 1.
