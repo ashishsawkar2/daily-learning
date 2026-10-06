@@ -1,0 +1,15 @@
+Today I solved leetcode question 2610: Convert an array into 2D array with conditions.
+
+Description: It states that we are given an array and we must split it into a 2D array.
+              But our condition is that every row in 2D array must have unique elements and we must make minimum number of rows.
+              eg- [1,2,3,4,2,3,1,1]
+                  ans=[[1,2,3,4],[1,2,3],[1]]
+
+Solution: First we create a hashmap and keep the counts of each and every element in our array.
+          Then we create an answer array and a variable named i.
+          Now we will run a while loop till i is less than our array size.
+          Then we will create an array inside our while loop.
+          Now we will start a for loop which we go through every element in hashmap once.
+          We will just add the elements to our array and reduce the count by 1. And increase i by 1.
+          When our loop finishes we will add that array to our answer array.
+          This way our 2D matrix will have unique elements in each row.
