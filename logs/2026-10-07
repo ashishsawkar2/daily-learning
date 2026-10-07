@@ -1,0 +1,9 @@
+Today I solved leetcode question 2799:Count complete subarrays in an Array.
+
+Description: It states that we are given an array and we must return total number of subarrays who have same number of distinct elements as given array.
+
+Solution: First we count total number of unique elements in given array.
+          We will then create an answer variable.
+          Then we start our for loop and another for loop inside of it.
+          Then we will create a hashmap.
+          Then we will check number of distinct eleents in current subarray. If it is same as main array we will increase answer variable by 1.
