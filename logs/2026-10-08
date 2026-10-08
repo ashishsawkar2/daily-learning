@@ -1,0 +1,14 @@
+Today I solved leetcode question 3075:Maximize happiness of selected children.
+
+Description: We are given an array of integers and an integer k.
+            We want to select k elements from array but with each turn value of remaining decreases by 1.
+            And we want to return maximum number of integers we can get.
+            And numbers cannot go below zero.
+
+Solution: First we sort the array.
+          Then we create 2 variables, answer and current, both with values 0.
+          Now we will start our for loop but from the end of the array till start.
+          Now first we will check if current is equal to k. If yes then break else continue.
+          Then we will check if current element minus current is greater than zero or not. If yes add current element minus current to answer.
+          If it is less than zero then break.
+          And at last return the answer.
