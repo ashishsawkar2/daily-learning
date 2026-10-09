@@ -1,0 +1,12 @@
+Today I solved leetcode question 506: Relative Rank
+
+Description: We are given an array where each index represents score of different players.
+              We are told to return an array where we rank each player based on their score.
+              eg- score=[1,2,5,4,3]
+                 ans=["5","4","Gold Medal","Silver Medal","Bronze Medal"]
+
+Solution: First we create the copy of this array and sort it.
+          Then we create a hashmap where we store the rank of each player by the help of sorted array.
+          Then we create an answer array.
+          We then start a for loop in score array.
+          We check the rank of the current player and give them their ranks accordibg to it.
