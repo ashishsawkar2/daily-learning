@@ -1,0 +1,25 @@
+Today I solved leetcode question 824:Goat Latin.
+
+Description: We are given a sentence in english and we must convert it to goat latin.
+              Rules of goat latin are:
+              If a word begins with a vowel ('a', 'e', 'i', 'o', or 'u'), append "ma" to the end of the word.
+                  eg- The word "apple" becomes "applema".
+              If a word begins with a consonant (i.e., not a vowel), remove the first letter and append it to the end, then add "ma".
+                  eg- The word "goat" becomes "oatgma".
+              Add one letter 'a' to the end of each word per its word index in the sentence, starting with 1.
+                   eg- The first word gets "a" added to the end, the second word gets "aa" added to the end, and so on.
+
+Solution:  First we create 3 variables, answer, location and i.
+            Location and i will be zero and answer will be an empty string.
+            So we start our while loop till the end of our sentence.
+            We will again run a while loop till there are empty spaces at location i.
+            Then we will create a word variable.
+            Here we will increase location by 1.
+            Now we will push all letters in word till we either reach end of sentence or till we reach an empty space.
+            Then we will check if first letter of the word is a vowel or constant.
+            If it is a vowel then we will add ma to our word and add it to answer. And we will also add same a as the location of current word.
+            Then we will check if i is at the end of sentence or not. If not we will add an empty space to answer.
+            If it is not a vowel then we will first create a new variable named neww_word which will be an empty string.
+            Here we will add all the letters of word except its first letter which we will add at last.
+            We will then add ma and a's same as loaction amount.
+            Then we will check if i is at the end of sentence or not. If not we will add an empty space to answer.
