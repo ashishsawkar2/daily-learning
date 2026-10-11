@@ -1,0 +1,16 @@
+Today I solved leetcode question 830:Postions of large groups.
+
+Description: It states that we are given a string s.
+              A large group is when a sequence of 3 or more is formed of same letters.
+              And we must return starting and last index of each and every large group.
+              eg-s="abcdddeeffff"
+                    ans=[[3,5],[8,11]]
+
+Solution: First we must create an answer array. 
+          Then we must create a variable named i.
+          And we must start a for loop till i reaches the size of s.
+          Inside while loop we will create a vaiable named j whose value will be equal to i.
+          We will again start a while loop which will run till j is less than size of s and till elements at index i and j are equal.
+          Now we will check gap between i and j.
+          If it is more than 3 we will add i and j-1 as an array in answer array.
+          At last we will make value of i equal to j.
