@@ -1,0 +1,17 @@
+Today I solved leetcode question 3727: Maximum alternating sum of squares
+
+Description: It states that we are given an array of integers.
+              We must arrange them in such a way that when we add squares of numbers at even index and subtract squares of nums at odd index we must get maximum sum.
+              eg- array=[1,2,3]
+                  ans=12 we can arrange like [2,1,3]
+
+Solution: As we are taking squares of the numbers so their initial sign does not matter.
+          First we convert all the negative integers to positive numbers.
+          Then we sort the whole array.
+          Now we create three variables named i,j and answer.
+          i and answer will have value as 0 and j will have value of last index of our array.
+          Then we will start our while loop which will run till i is less than equal to j.
+          First we add square of number at index j to our answer.
+          Then we check if i is equal to j or not. If yes then we will break our loop.
+          Now we will subtract square of number from answer.
+          At last we will increase i by 1 and decrease j by 1.
