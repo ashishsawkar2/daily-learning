@@ -1,0 +1,13 @@
+Today I solved leetcode question 2778: Sum of squares of special elements.
+
+Description: We are given an array which is 1-indexed.
+              And n is the size of array.
+              Then we must return the sum of squares of elements whose index number completely divides n.
+              eg- array=[1,2,3,4]
+                  n=4 
+                  ans=21 
+
+Solution: First we create answer variable.
+          Then we start our for loop from 0 till array size minus 1.
+          Now we will check whether array size divided by i+1 is zero or not.
+          If yes then we will add square of number at i to answer.
