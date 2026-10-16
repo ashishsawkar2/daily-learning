@@ -1,0 +1,10 @@
+Today I solved leetcode question 1037:Valid Boomerang.
+
+Description: It states that we wre given an array with 3 pairs.
+              We can consider them points and we must return true if they do not make a straight line.
+              Else we must return false.
+
+Solution: So to check whether the points make a straight line or not we must first check the slope made by them.
+          First we will find slope of first 2 points then of next two points.
+          And if both slopes are equal we will return false.
+          Else we will return true.
